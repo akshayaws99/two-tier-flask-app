@@ -43,4 +43,20 @@ pipeline{
               }
           }
     }
+post {
+        success{
+            emailtext(
+                subject: "Build Successful",
+                body: "Build successful",
+                to: 'akshayaws99@gmail.com
+            )
+        }
+        failure{
+            emailtext(
+                subject: "Build Successful",
+                body: "Build failed",
+                to: 'akshayaws99@gmail.com
+            )
+        }
+    }
 }
